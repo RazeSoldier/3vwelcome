@@ -1,0 +1,29 @@
+{
+  "name": "razesoldier/seat-3vwelcome",
+  "license": "GPL-3.0",
+  "type": "seat-plugin",
+  "authors": [
+    {
+      "name": "RazeSoldier",
+      "email": "razesoldier@outlook.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RazeSoldier\\Seat3VWelcome\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RazeSoldier\\Seat3VWelcome\\WelcomeServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "eveseat/services": "^3.0",
+    "eveseat/eveapi": "^3.0",
+    "eveseat/web": "^3.0",
+    "eveseat/eseye": "^1.0"
+  }
+}
