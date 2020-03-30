@@ -1,18 +1,11 @@
 <?php
 
 return [
-    'welcome' => [
+    'a' => [
         'name' => 'Welcome',
         'route_segment' => 'welcome',
+        'route' => 'welcome.main',
         'icon' => 'fa-wrench',
-        'label' => '第一步',
-        'entries' => [
-            [
-                'name' => 'First Step',
-                'label' => '新手第一步',
-                'icon' => 'fa-medkit',
-                'route' => 'welcome.main',
-            ],
-        ],
+        'label' => '绑定QQ',
     ],
 ];

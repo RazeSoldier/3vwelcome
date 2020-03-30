@@ -13,18 +13,29 @@
                     @if ($qq === null)
                         <form action="{{route('welcome.bindqq')}}" role="form" method="post">
                             {{csrf_field()}}
-                            <div>
-                                <label for="killMailUrl" class="control-label">你尚未绑定QQ，请在此输入QQ号
-                                    <input type="text" class="form-control" id="qq" name="qq" required />
-                                </label>
-                                <input type="submit" class="btn" value="绑定">
-                            </div>
+                            <label for="killMailUrl" class="control-label">你尚未绑定QQ，请在此输入QQ号
+                                <input type="text" class="form-control" id="qq" name="qq" required />
+                            </label>
+                            <input type="submit" class="btn" value="绑定">
                         </form>
                     @else
                         <span class="info-box-number" id="qq">{{$qq}}</span>
                     @endif
                 </div>
             </div>
+            @if ($language !== 'cn')
+                <div class="info-box">
+                    <span class="info-box-icon bg-maroon"><i class="fa fa-bomb"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">切换为中文</span>
+                        <form action="{{route('welcome.switch-lang')}}" role="form" method="post">
+                            {{csrf_field()}}
+                            <input type="hidden" name="lang" value="cn">
+                            <input type="submit" class="btn" value="切换">
+                        </form>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 @endsection

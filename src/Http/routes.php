@@ -9,4 +9,5 @@ Route::group([
 ], function () {
     Route::get('/', 'WelcomeController@showMainPage')->name('welcome.main');
     Route::post('/bind-qq', 'WelcomeController@bindQQ')->name('welcome.bindqq');
+    Route::post('/switch-lang', 'WelcomeController@switchLang')->name('welcome.switch-lang');
 });

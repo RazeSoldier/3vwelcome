@@ -23,6 +23,7 @@ class WelcomeController extends Controller
         }
         return view('welcome::main', [
             'qq' => $qq,
+            'language' => Profile::get('language'),
         ]);
     }
 
@@ -35,5 +36,14 @@ class WelcomeController extends Controller
         if ($request->isAjax !== '1') {
             return back()->withInput();
         }
+    }
+
+    public function switchLang(Request $request)
+    {
+        if ($request->lang === null) {
+            abort(404);
+        }
+        Profile::set('language', $request->lang);
+        return back()->withInput();
     }
 }
