@@ -5,7 +5,7 @@ return [
         'name' => 'Welcome',
         'route_segment' => 'welcome',
         'route' => 'welcome.main',
-        'icon' => 'fa-wrench',
+        'icon' => 'fas fa-wrench',
         'label' => '绑定QQ',
     ],
 ];

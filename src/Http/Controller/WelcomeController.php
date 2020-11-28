@@ -10,7 +10,7 @@ class WelcomeController extends Controller
 {
     public function showMainPage()
     {
-        $email = auth()->user()->group()->getResults()->getEmailAttribute();
+        $email = auth()->user()->getEmailAttribute();
         if ($email === null) {
             $qq = null;
         } else {
