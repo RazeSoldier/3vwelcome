@@ -30,7 +30,7 @@
                         <span class="info-box-text">切换为中文</span>
                         <form action="{{route('welcome.switch-lang')}}" role="form" method="post">
                             {{csrf_field()}}
-                            <input type="hidden" name="lang" value="cn">
+                            <input type="hidden" name="lang" value="zh-CN">
                             <input type="submit" class="btn" value="切换">
                         </form>
                     </div>
