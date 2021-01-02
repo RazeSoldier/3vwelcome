@@ -23,7 +23,7 @@
                     @endif
                 </div>
             </div>
-            @if ($language !== 'cn')
+            @if ($language !== 'zh-CN')
                 <div class="info-box">
                     <span class="info-box-icon bg-maroon"><i class="fa fa-bomb"></i></span>
                     <div class="info-box-content">
